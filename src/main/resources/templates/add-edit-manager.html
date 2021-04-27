@@ -1,0 +1,59 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Add / Edit Managers</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body style="background-color:cornflowerblue;">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1> Managers List </h1>
+    </div>
+  </div>
+
+  <form th:action="@{/save-manager}" th:object="${manager}" method="post">
+    <input type="hidden" th:value="${manager.id}" name="id"/>
+    <div class="form-group">
+      <label for="name">Manager Name:</label>
+      <input th:field="*{name}" type="text" class="form-control" id="name">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></label>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Team Coaching:</label>
+      <input th:field="*{team}" type="text" class="form-control" id="team">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('team')}" th:errors="*{team}"></label>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Manager Status:</label>
+      <input th:field="*{status}" type="text" class="form-control" id="transfer">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('status')}" th:errors="*{status}"></label>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age:</label>
+      <input th:field="*{age}" type="text" class="form-control" id="age">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('age')}" th:errors="*{age}"></label>
+    </div>
+
+
+    <div class="form-group">
+      <label for="name">Nation:</label>
+      <input th:field="*{nation}" type="text" class="form-control" id="nation">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('nation')}" th:errors="*{nation}"></label>
+    </div>
+
+    <div class="form-group">
+      <label for="date">Date:</label>
+      <input th:field="*{date}" type="text" class="form-control" id="date">
+      <label th:style="'color:red'" th:if="${#fields.hasErrors('date')}" th:errors="*{date}"></label>
+    </div>
+    <a th:href="@{/managers-ui}">
+      <button type="button" class="btn btn-danger">Cancel</button>
+    </a>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
+</body>
+</html>

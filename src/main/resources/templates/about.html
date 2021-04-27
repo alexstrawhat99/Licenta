@@ -1,0 +1,501 @@
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+    .fa-star,.fa-soccer-ball-o {font-size:200px}
+</style>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--<link rel="stylesheet" href="{% static 'css/custom-style.css' %}">-->
+<link rel="stylesheet" href="css/custom-style.css">
+
+
+<title >Transfermarkt</title>
+
+<head>
+
+
+
+</head>
+<body>
+
+
+
+<div><img align="left" width="350" height="200" src="./img/transfermakrt.png">
+
+    <h1><center>Transfermarkt</center><center><span class="badge badge-secondary">All about Soccer</span></center></h1></div>
+
+<br>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+
+        <!--        <img src="{% static 'img/download.png' %}" width="50" height="45" alt="">-->
+
+    </a>
+    <!--{#  <a class="navbar-brand" href="#">Magazin</a>#}-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active">
+
+                <a class="nav-link" href="/homepage">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/players-ui">Players</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/managers-ui">Managers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/legends-ui">Football Legends</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/teams-ui">Teams</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+            </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="/signup">Register</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+
+<!--            </li>-->
+
+        </ul>
+        <!--{#    <form class="form-inline my-2 my-lg-0">#}-->
+        <!--{#      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}-->
+        <!--{#      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}-->
+        <!--{#    </form>#}-->
+    </div>
+</nav>
+
+
+
+
+
+
+
+
+<section id="popular-destinations" class="popular-destinations py-5">
+    <div class="container-fluid container-fluid-max">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="pb-3 text-red">About US</h2>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4">
+                <a href="" class="text-white">
+                    <figure class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="https://www.fcbarcelonanoticias.com/uploads/s1/29/67/58/messi-cruyff-296758.jpeg" alt="Vienna">
+                        <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                            <h3>Football Legends</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <a href="" class="text-white">
+                    <figure class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="https://www.theleader.info/wp-content/uploads/2020/12/Ancelotti.jpg" alt="Edinburgh">
+                        <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                            <h3>Best Managers</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <a href="" class="text-white">
+                    <figure class="position-relative overflow-hidden">
+                        <img class="img-fluid" src="https://techround.co.uk/wp-content/uploads/2020/08/neymar-junior-1-768x432.jpg" alt="Edinburgh">
+                        <figcaption class="d-flex align-items-center justify-content-center position-absolute">
+                            <h3>New Players</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+
+
+    </div>
+    </div>
+
+</section>
+
+
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+        <div class="w3-third w3-center">
+            <i class="fa fa-soccer-ball-o w3-padding-64 w3-text-red w3-margin-right"></i>
+        </div>
+
+        <div class="w3-twothird">
+            <h1>DataBase with best Active Players</h1>
+            <h5 class="w3-padding-32">Jean-Pierre Papin has described football as a "universal language".
+                Footballers across the world and at almost any level may regularly attract large crowds of
+                spectators, and players are the focal points of widespread social phenomena such as association football culture.</h5>
+
+            <p2 class="w3-text-grey">In association football there are four traditional types of specialties (positions):
+                goalkeepers (goalies), defenders (full-backs), midfielders (half-backs), forwards (attackers). Special purpose positions include such performers like sweepers, stoppers, second forwards (under-attackers), wingers, insiders, etc.
+
+                Goalkeepers: good reflexes, communication with defence.
+                Centre-backs: good heading and tackling ability, height.
+                Full-backs: pace, stamina, anticipation, tackling and marking abilities.
+                Central midfielders: stamina, passing ability, team responsibility.
+                Wingers: pace, technical ability like dribbling and close control.
+                Forwards: finishing ability, composure, technical ability, heading ability.</p2>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="w3-row-padding w3-center w3-margin-top">
+            <div class="card text-center">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs">
+
+                             </ul>
+                       </div>
+                <div class="card-body">
+                      <h5 class="card-title">Support Us!</h5>
+
+                    <p2 class="card-text"> Support Our Sponsor from the following Link:</p2>
+                       </div>
+                <div>
+                      <a href="https://www.manutd.com/" class="btn btn-primary">Manchester United Official Website</a>
+                             </div>
+
+                 </div>
+            <div class="text-center text-white">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19003.8898127432!2d-2.295233839748557!3d53.459769870171925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bade198f6a2ab%3A0xa06b7a1e162e18f9!2sOld%20Trafford%2C%20Stretford%2C%20Manchester%2C%20Regatul%20Unit!5e0!3m2!1sro!2sro!4v1617380595317!5m2!1sro!2sro"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Footer -->
+<footer class="pt-5 pb-4" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">ABOUT US</h5>
+                <li>
+                    <span>Football Website about the latest news</span>
+                </li>
+
+                <ul class="f-address">
+
+
+                    <li>
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="fas fa-map-marker"></i></div>
+                            <div class="col-10">
+                                <h6 class="font-weight-bold mb-0">Map world Guide </h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="col-1">
+                                <i class="far fa-envelope"></i></div>
+                            <div class="col-10">
+                                <h6 class="font-weight-bold mb-0">Have any questions?</h6>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fas fa-phone-volume"></i></div>
+                            <div class="col-10">
+                                <h6 class="font-weight-bold mb-0">Phone Number</h6>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">FRESH TWEETS</h5>
+                <ul class="f-address">
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <label>10 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <label>16 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-1"><i class="fab fa-twitter"></i></div>
+                            <div class="col-10">
+                                <label>22 Mins Ago</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
+                <ul2 class="recent-post">
+                    <li>
+                        <label class="mr-3">28 <br><span>APR</span></label>
+                        <span>Europa League Fixture</span>
+                    </li>
+
+                    <li>
+                        <label class="mr-3">29 <br><span>APR</span></label>
+                        <span>Champions League fixture</span>
+                    </li>
+
+                    <li>
+                        <label class="mr-3">30 <br><span>APR</span></label>
+                        <span>World Cup Qualifiers</span>
+                    </li>
+                    <!--                    {#                            	<li>#}-->
+                    <!--                    {#								<label class="mr-3">30 <br><span>APR</span></label>#}-->
+                    <!--                    {#								<span>World Cup Qualifiers</span>#}-->
+                    <!--                    {#							</li>#}-->
+                </ul2>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+                <h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Your Email Address">
+                    <span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
+                </div>
+                <ul class="social-pet mt-4">
+                    <li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Copyright -->
+<section class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <div class="text-center text-white">
+                    &copy; 2021 Football APP
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</body>
+</html>
+
+
+
+<style>
+    /* RESET RULES & HELPER CLASSES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    :root {
+        --lightblue: #f6f9fc;
+        --red: #d64041;
+    }
+
+    a,
+    a:hover {
+        color: inherit;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .bg-lightblue {
+        background: var(--lightblue);
+    }
+
+    .bg-red {
+        background: var(--red);
+    }
+
+    .text-red {
+        color: var(--red);
+    }
+
+    .container-fluid-max {
+        max-width: 1440px;
+    }
+
+    .cover {
+        background: no-repeat center/cover;
+    }
+
+    .p-15 {
+        padding: 15px;
+    }
+
+    /* SCROLL ANIMATIONS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .scroll .page-header {
+        background: var(--red);
+    }
+
+    .scroll .hero {
+        transform: scale(0.98);
+    }
+
+    /* HEADER
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .page-header {
+        transition: background 0.5s ease-in-out;
+    }
+
+    .page-header .navbar {
+        padding: 1rem 0;
+    }
+
+    .page-header .navbar-toggler {
+        /* the variable is inherited from BS4 built-in variables */
+        border-color: var(--white);
+    }
+
+    /* BANNER SECTION
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .hero {
+        background-attachment: fixed;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.5) 0,
+                rgba(0, 0, 0, 0.3) 50%,
+                rgba(0, 0, 0, 0.1) 100%
+        );
+    }
+
+    .hero .container-fluid {
+        z-index: 10;
+    }
+
+    /* POPULAR DESTINATIONS SECTION
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .popular-destinations figure {
+        margin-bottom: 30px;
+    }
+
+    .popular-destinations figcaption {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .popular-destinations img {
+        filter: grayscale(100%) blur(3px);
+        transition: transform 0.5s, filter 0.75s;
+    }
+
+    .popular-destinations a:hover img {
+        transform: scale(1.25);
+        filter: none;
+    }
+
+    /* PAGE FOOTER
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    .page-footer .footer-links {
+        text-align: right;
+    }
+
+    /* MEDIA QUERIES
+    –––––––––––––––––––––––––––––––––––––––––––––––––– */
+    /* MEDIUM SCREENS */
+    @media screen and (max-width: 991px) {
+        .page-header {
+            background: var(--red);
+        }
+    }
+
+    /* SMALL SCREENS */
+    @media screen and (max-width: 767px) {
+        .page-footer .footer-child {
+            text-align: center;
+        }
+    }
+
+
+</style>
+
+
+
