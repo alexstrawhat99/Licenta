@@ -1,0 +1,177 @@
+<!--views store/display the data from MongoDB-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Managers</title>
+  <link href="https://unpkg.com/tabulator-tables@4.9.3/dist/css/tabulator.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.9.3/dist/js/tabulator.min.js"></script>
+
+  <!-- Font Awesome Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .checked {
+      color: orange;
+    }
+  </style>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+
+<body style="background-color:cornflowerblue">
+
+
+<div class="container" >
+  <div class="row">
+    <div class="col-md-19">
+      <h1 style="text-align:center;"> Football Managers List </h1>
+    </div>
+  </div>
+  <a style="text-align:center;" th:href="@{/edit-add-manager}">
+    <div style="text-align: center;">
+      <button type="button" class="btn btn-success" >Add New Managers</button>
+    </div>
+  </a>
+
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-sortable">
+        <thead>
+        <tr>
+          <!--
+           <th>Id</th>
+          -->
+          <th>Football Manager Name</th>
+          <th>Manager Status</th>
+          <th>Team</th>
+          <th>Manager Nation</th>
+          <th>Manager Age</th>
+          <th>Date</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:if="${managers.empty}">
+          <td colspan="2"> No Managers Available</td>
+        </tr>
+        <tr th:each="manager : ${managers}">
+
+          <td><span th:text="${manager.name}"> Manager Name </span></td>
+          <td><span th:text="${manager.status}">Manager Status </span>
+
+          <td><span th:text="${manager.team}">Currently Coaching </span></td>
+          <td><span th:text="${manager.nation}"> Nation </span></td>
+          <td><span th:text="${manager.age}"> Age </span></td>
+          <td><span th:text="${#temporals.format(manager.date, 'dd-MM-yyyy HH:mm')}"> Date </span></td>
+          <td>
+            <a th:href="@{/delete-manager/{id}(id=${manager.id})}">
+              <button type="button" class="btn btn-danger">Delete</button>
+            </a>
+            <a th:href="@{/edit-add-manager/{id}(id=${manager.id})}">
+              <button type="button" class="btn btn-primary">Edit</button>
+            </a>
+
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div style="text-align: center;">
+        <a class="btn btn-primary" href="homepage" role="button">HomePage</a>
+<!--        <input  class="btn btn-primary" type="button" onclick="window.location.href='http://127.0.0.1:8000/homepage/';" value="ReturnToWebsite" />-->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<style>
+
+  .table-sortable th {
+    cursor: pointer;
+  }
+
+  .table-sortable .th-sort-asc::after {
+    content: "\25b4";
+  }
+
+  .table-sortable .th-sort-desc::after {
+    content: "\25be";
+  }
+
+  .table-sortable .th-sort-asc::after,
+  .table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+  }
+
+  .table-sortable .th-sort-asc,
+  .table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+
+</style>
+
+
+
+<script>
+
+  /**
+   * Sorts a HTML table.
+   *
+   * @param {HTMLTableElement} table The table to sort
+   * @param {number} column The index of the column to sort
+   * @param {boolean} asc Determines if the sorting will be in ascending
+   */
+  function sortTableByColumn(table, column, asc = true) {
+    const dirModifier = asc ? 1 : -1;
+    const tBody = table.tBodies[0];
+    const rows = Array.from(tBody.querySelectorAll("tr"));
+
+    // Sort each row
+    const sortedRows = rows.sort((a, b) => {
+      const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+      const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+
+      return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+    });
+
+    // Remove all existing TRs from the table
+    while (tBody.firstChild) {
+      tBody.removeChild(tBody.firstChild);
+    }
+
+    // Re-add the newly sorted rows
+    tBody.append(...sortedRows);
+
+    // Remember how the column is currently sorted
+    table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+    table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+  }
+
+  document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+    headerCell.addEventListener("click", () => {
+      const tableElement = headerCell.parentElement.parentElement.parentElement;
+      const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+      const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+      sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+    });
+  });
+
+
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

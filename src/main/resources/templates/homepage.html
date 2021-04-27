@@ -1,0 +1,512 @@
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+	.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+	.fa-star,.fa-soccer-ball-o {font-size:200px}
+</style>
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!--<link rel="stylesheet" href="{% static 'css/custom-style.css' %}">-->
+<link rel="stylesheet" href="css/custom-style.css">
+
+
+<title >Transfermarkt</title>
+
+<head>
+
+
+
+</head>
+<body>
+
+
+
+<div><img align="left" width="350" height="200" src="./img/transfermakrt.png">
+
+	<h1><center>Transfermarkt</center><center><span class="badge badge-secondary">All about Soccer</span></center></h1></div>
+
+<br>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">
+
+		<!--        <img src="{% static 'img/download.png' %}" width="50" height="45" alt="">-->
+
+	</a>
+	<!--{#  <a class="navbar-brand" href="#">Magazin</a>#}-->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+
+			<li class="nav-item active">
+
+				<a class="nav-link" href="/homepage">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/players-ui">Players</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/managers-ui">Managers</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/legends-ui">Football Legends</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/teams-ui">Teams</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/logout">Logout</a>
+			</li>
+<!--			<li class="nav-item">-->
+<!--				<a class="nav-link" href="/signup">Register</a>-->
+<!--			</li>-->
+			<li class="nav-item dropdown">
+
+			</li>
+
+		</ul>
+		<!--{#    <form class="form-inline my-2 my-lg-0">#}-->
+		<!--{#      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">#}-->
+		<!--{#      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>#}-->
+		<!--{#    </form>#}-->
+	</div>
+</nav>
+
+
+
+
+
+
+
+
+
+<!--{% block content %}-->
+
+<body>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" width="50">
+	<ol class="carousel-indicators">
+		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="d-block w-100" src="./img/om.jpg" width="350" height="500" alt="First slide">
+			<div class="carousel-caption d-none d-md-block">
+				<h5>Olimpique Marseille Stadium</h5>
+				<!--{#    <p>France</p>#}-->
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="./img/ac%20milan.jpg" width="350" height="500" alt="Second slide">
+			<div class="carousel-caption d-none d-md-block">
+				<h5>AC Milan Supporters</h5>
+				<!--{#    <p>Italy</p>#}-->
+			</div>
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="./img/liverpool-1-e1595485682937.jpg" width="350" height="500" alt="Third slide">
+			<div class="carousel-caption d-none d-md-block">
+				<h5>Livepool Winning the title</h5>
+				<!--{#    <p>England</p>#}-->
+			</div>
+		</div>
+	</div>
+	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+
+</div>
+
+
+<!-- Header -->
+<header class="w3-container w3-blue-gray w3-center" style="padding:128px 16px">
+	<h1 class="w3-margin w3-jumbo">Welcome to Transfer App</h1>
+	<a class="nav-link"  href="/about">
+		<button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" >About Us</button>
+	</a>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+	<div class="w3-content">
+		<div class="w3-twothird">
+			<h1>DataBase with best Football Managers</h1>
+			<h5 class="w3-padding-32">There are 92 association football teams in the top four tiers of English football,
+				all of which have a manager, or pair of joint managers, sometimes given the alternative title of head co</h5>
+
+			<p2 class="w3-text-grey">Some managers listed have had more than one spell in charge at their current club or had spells at
+				more than one club, however this table deals only with their current appointment. This list includes every manager
+				currently managing a club in the Premier League and the English Football League, in order of the date that they took up
+				their appointment: this is not necessarily the date on which they were appointed, so there may be a discrepancy between
+				the date appointed and the time as manager.</p2>
+		</div>
+
+		<div class="w3-third w3-center">
+			<i class="fa fa-soccer-ball-o w3-padding-64 w3-text-red"></i>
+		</div>
+	</div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+	<div class="w3-content">
+		<div class="w3-third w3-center">
+			<i class="fa fa-star w3-padding-64 w3-text-red w3-margin-right"></i>
+		</div>
+
+		<div class="w3-twothird">
+			<h1>DataBase with best Football Icons</h1>
+			<h5 class="w3-padding-32">This is  Football's Greatest... the ultimate soccer hall of fame
+
+				This is the place where legends live - the greatest ever soccer players and  teams. See who has made our hall of fame.</h5>
+
+			<p2 class="w3-text-grey">The players listed in this website are all world class players - the greatest players in
+				their position of all time. But only a select few can be counted amongst the much smaller category of 'Legends'.
+				These are the iconic players that are the best the game has ever seen. They have represented the game -
+				becoming household names even to those who do not follow it, they have transformed and expanded the game,
+				and have seized the imagination of the world - often during a World Cup. Most of all they have acted as an
+				inspiration to both fans and amateur and professional players and have inspired millions to follow, play
+				and learn the game.</p2>
+		</div>
+	</div>
+</div>
+
+<!--{#<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">#}-->
+<!--{#    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>#}-->
+<!--{#</div>#}-->
+
+<!--{#&lt;!&ndash; Footer &ndash;&gt;#}-->
+<!--{#<footer class="w3-container w3-padding-64 w3-center w3-opacity">#}-->
+<!--{#  <div class="w3-xlarge w3-padding-32">#}-->
+<!--{#    <i class="fa fa-facebook-official w3-hover-opacity"></i>#}-->
+<!--{#    <i class="fa fa-instagram w3-hover-opacity"></i>#}-->
+<!--{#    <i class="fa fa-snapchat w3-hover-opacity"></i>#}-->
+<!--{#    <i class="fa fa-pinterest-p w3-hover-opacity"></i>#}-->
+<!--{#    <i class="fa fa-twitter w3-hover-opacity"></i>#}-->
+<!--{#    <i class="fa fa-linkedin w3-hover-opacity"></i>#}-->
+<!--{# </div>#}-->
+<!--{# <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>#}-->
+<!--{#</footer>#}-->
+
+<script>
+	// Used to toggle the menu on small screens when clicking on the menu button
+	function myFunction() {
+		var x = document.getElementById("navDemo");
+		if (x.className.indexOf("w3-show") === -1) {
+			x.className += " w3-show";
+		} else {
+			x.className = x.className.replace(" w3-show", "");
+		}
+	}
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{#<p2>#}-->
+<!--{#  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" width="250">Toggle first element</a>#}-->
+<!--{#  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>#}-->
+<!--{#  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>#}-->
+<!--{#<button type="button" class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" >About UEFA</button>#}-->
+<!--{#<button type="button" class="btn btn-secondary btn-lg btn-block" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1" >About FIFA</button>#}-->
+<!--{#</p2>#}-->
+<!--{#<div>#}-->
+<!--{#  <div class="col">#}-->
+<!--{#    <div class="collapse multi-collapse" id="multiCollapseExample1">#}-->
+<!--{#      <div class="card card-body" >#}-->
+<!--{#       Federația Internațională de Fotbal Asociație, abreviat FIFA, (Fédération Internationale de Football Association în franceză, International Federation of Association Football în engleză) este organizația internațională care reglementează regulamentul și competițiile jocului de fotbal. A fost fondată la Paris la 21 martie 1904, iar în prezent are sediul la Zürich, Elveția. Președintele FIFA este Gianni Infantino, din anul 2016, când l-a înlocuit pe Sepp Blatter, implicat într-un scandal de corupție. FIFA este responsabilă cu organizarea turneelor internaționale de fotbal, cea mai importantă competiție organizată fiind Cupa Mondială FIFA, a cărui primă ediție a avut loc în anul 1930. Până în prezent s-au disputat douăzeci de ediții. Următoarea ediție se va desfășura în Qatar în 2022.#}-->
+<!--{#La FIFA sunt afiliate 208 federații de fotbal.#}-->
+<!--{#      </div>#}-->
+<!--{#    </div>#}-->
+<!--{#  </div>#}-->
+<!--{#  <div class="col">#}-->
+<!--{#    <div class="collapse multi-collapse" id="multiCollapseExample2">#}-->
+<!--{#      <div class="card card-body">#}-->
+<!--{#        Uniunea Asociațiilor Europene de Fotbal (Union of European Football Associations în limba engleză), denumită aproape întotdeauna prin acronimul UEFA, este corpul administrativ și de control al fotbalului european. UEFA reprezintă asociațiile naționale de fotbal ale Europei, organizează competiții pan-europene la nivel de club și de echipe naționale, și are control asupra remunerațiilor financiare, regulamentelor și drepturile media asupra acestor competiții. Mai multe asociații fotbalistice naționale care se află din punct de vedere geografic în Asia aparțin de UEFA și nu de AFC (Confederația Asiatică de Fotbal), inclusiv Israelul și Kazahstanul. UEFA este una dintre cele șase confederații continentale ale FIFA. Dintre toate, este de departe cea mai puternică din punct de vedere financiar și al influenței asupra jocului pe glob. Practic toți jucătorii de top pe plan mondial joacă în ligile europene datorită salariilor plătite de cele mai bogate cluburi de fotbal din lume, în special în Anglia, Italia, Spania și Germania. Multe dintre cele mai puternice echipe naționale din lume sunt din zona UEFA. Din cele 32 de locuri disponibile în Campionatul Mondial de Fotbal 2006, 14 sunt alocate echipelor naționale UEFA.#}-->
+<!--{#      </div>#}-->
+<!--{#    </div>#}-->
+<!--{#  </div>#}-->
+<!--{#</div>#}-->
+<!--{##}-->
+<!--{##}-->
+<!--{#<div class="card-group">#}-->
+<!--{#<div class="card">#}-->
+<!--{#    <img class="card-img-top" src="/static/img/news.png" alt="Card image cap"  height="200">#}-->
+<!--{#    <div class="card-body">#}-->
+<!--{#      <h5 class="card-title">Latest News</h5>#}-->
+<!--{##}-->
+<!--{#    <button type="button" class="btn btn-outline-primary">Breaking News</button>#}-->
+<!--{#    </div>#}-->
+<!--{#    <div class="card-footer">#}-->
+<!--{#      <small class="text-muted">Last updated 7 mins ago</small>#}-->
+<!--{#    </div>#}-->
+<!--{#  </div>#}-->
+<!--{#  <div class="card">#}-->
+<!--{#    <img class="card-img-top" src="/static/img/about.gif" alt="Card image cap" height="200">#}-->
+<!--{#    <div class="card-body">#}-->
+<!--{#      <h5 class="card-title">About Players</h5>#}-->
+<!--{##}-->
+<!--{#        <button type="button" class="btn btn-outline-warning">About</button>#}-->
+<!--{#    </div>#}-->
+<!--{#    <div class="card-footer">#}-->
+<!--{#      <small class="text-muted">Last updated 3 mins ago</small>#}-->
+<!--{#    </div>#}-->
+<!--{#  </div>#}-->
+<!--{#  <div class="card">#}-->
+<!--{#    <img class="card-img-top" src="/static/img/rumors.jpg" alt="Card image cap" height="200">#}-->
+<!--{#    <div class="card-body">#}-->
+<!--{#      <h5 class="card-title">Transfers Rumors</h5>#}-->
+<!--{##}-->
+<!--{#    <button type="button" class="btn btn-outline-success">New Rumors</button>#}-->
+<!--{#    </div>#}-->
+<!--{#    <div class="card-footer">#}-->
+<!--{#      <small class="text-muted">Last updated 3 mins ago</small>#}-->
+<!--{#    </div>#}-->
+<!--{#  </div>#}-->
+<!--{#</div>#}-->
+<!--{##}-->
+<!--{##}-->
+<!--{##}-->
+<!--{#<nav aria-label="...">#}-->
+<!--{#  <ul class="pagination">#}-->
+<!--{#    <li class="page-item disabled">#}-->
+<!--{#      <span class="page-link">Previous</span>#}-->
+<!--{#    </li>#}-->
+<!--{#    <li class="page-item"><a class="page-link" href="#">1</a></li>#}-->
+<!--{#    <li class="page-item active">#}-->
+<!--{#      <span class="page-link">#}-->
+<!--{#        2#}-->
+<!--{#        <span class="sr-only">(current)</span>#}-->
+<!--{#      </span>#}-->
+<!--{#    </li>#}-->
+<!--{#    <li class="page-item"><a class="page-link" href="#">3</a></li>#}-->
+<!--{#    <li class="page-item">#}-->
+<!--{#      <a class="page-link" href="#">Next</a>#}-->
+<!--{#    </li>#}-->
+<!--{#  </ul>#}-->
+<!--{#</nav>#}-->
+<!--{##}-->
+<!--{##}-->
+<!--{#<style>#}-->
+<!--{#.button {#}-->
+<!--{#  background-color: #4CAF50; /* Green */#}-->
+<!--{#  border: none;#}-->
+<!--{#  color: white;#}-->
+<!--{#  padding: 15px 32px;#}-->
+<!--{#  text-align: center;#}-->
+<!--{#  text-decoration: none;#}-->
+<!--{#  display: inline-block;#}-->
+<!--{#  font-size: 30px;#}-->
+<!--{#  margin: 4px 2px;#}-->
+<!--{#  cursor: pointer;#}-->
+<!--{#}#}-->
+<!--{##}-->
+<!--{##}-->
+<!--{#.button3 {width: 100%;}#}-->
+<!--{#.button3 {height: 100px;}#}-->
+<!--{#</style>#}-->
+<!--{##}-->
+<!--{#   <p2 id="demo"></p2>#}-->
+<!--{##}-->
+<!--{#  <button href="http://localhost:3000/players" class="btn btn-primary button button3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">#}-->
+<!--{#    PlayerDataBase#}-->
+<!--{#  </button>#}-->
+<!--{##}-->
+<!--{# <form>#}-->
+<!--{#      <input type="button" onclick="window.location.href='http://localhost:3000/players';"  class="btn btn-primary button button3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" value="PlayersListDataBase" />#}-->
+<!--{#    </form>#}-->
+<!--{##}-->
+<!--{##}-->
+
+
+
+
+
+<!--{% endblock %}-->
+
+
+
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<!-- Footer -->
+<footer class="pt-5 pb-4" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+				<h5 class="mb-4 font-weight-bold">ABOUT US</h5>
+				<li>
+					<span>Football Website about the latest news</span>
+				</li>
+
+				<ul class="f-address">
+					<!--                    {#							<li>#}-->
+					<!--                    {#								<div class="row">#}-->
+					<!--                        {#									<div class="col-1">#}-->
+					<!--                            {#                                        <i class="fas fa-map-marker"></i>#}-->
+					<!--                            {#									    <div class="col-10">#}-->
+					<!--                                {#                                        	<h6 class="font-weight-bold mb-0">Location</h6>#}-->
+					<!--                                {#									    </div>#}-->
+					<!--                            {#								    </div>#}-->
+					<!--                        {#                                </div>#}-->
+					<!--                    {#							</li>#}-->
+
+					<li>
+						<div class="row">
+							<div class="col-1">
+								<i class="fas fa-map-marker"></i></div>
+							<div class="col-10">
+								<h6 class="font-weight-bold mb-0">Map world Guide </h6>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="row">
+							<div class="col-1">
+								<i class="far fa-envelope"></i></div>
+							<div class="col-10">
+								<h6 class="font-weight-bold mb-0">Have any questions?</h6>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="row">
+							<div class="col-1"><i class="fas fa-phone-volume"></i></div>
+							<div class="col-10">
+								<h6 class="font-weight-bold mb-0">Phone Number</h6>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+				<h5 class="mb-4 font-weight-bold">FRESH TWEETS</h5>
+				<ul class="f-address">
+					<li>
+						<div class="row">
+							<div class="col-1"><i class="fab fa-twitter"></i></div>
+							<div class="col-10">
+								<label>10 Mins Ago</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="row">
+							<div class="col-1"><i class="fab fa-twitter"></i></div>
+							<div class="col-10">
+								<label>16 Mins Ago</label>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="row">
+							<div class="col-1"><i class="fab fa-twitter"></i></div>
+							<div class="col-10">
+								<label>22 Mins Ago</label>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+				<h5 class="mb-4 font-weight-bold">LATEST UPDATES</h5>
+				<ul2 class="recent-post">
+					<li>
+						<label class="mr-3">28 <br><span>APR</span></label>
+						<span>Europa League Fixture</span>
+					</li>
+
+					<li>
+						<label class="mr-3">29 <br><span>APR</span></label>
+						<span>Champions League fixture</span>
+					</li>
+
+					<li>
+						<label class="mr-3">30 <br><span>APR</span></label>
+						<span>World Cup Qualifiers</span>
+					</li>
+					<!--                    {#                            	<li>#}-->
+					<!--                    {#								<label class="mr-3">30 <br><span>APR</span></label>#}-->
+					<!--                    {#								<span>World Cup Qualifiers</span>#}-->
+					<!--                    {#							</li>#}-->
+				</ul2>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 mt-2 mb-4">
+				<h5 class="mb-4 font-weight-bold">CONNECT WITH US</h5>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Your Email Address">
+					<span class="input-group-addon" id="basic-addon2"><i class="fas fa-check"></i></span>
+				</div>
+				<ul class="social-pet mt-4">
+					<li><a href="#" title="facebook"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#" title="google-plus"><i class="fab fa-google-plus-g"></i></a></li>
+					<li><a href="#" title="instagram"><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- Copyright -->
+<section class="copyright">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 ">
+				<div class="text-center text-white">
+					&copy; 2021 Football APP
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+</body>
+</html>

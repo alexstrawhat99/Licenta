@@ -1,0 +1,130 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-soccer-ball-o {font-size:200px}
+</style>
+<style>
+.checked {
+  color: orange;
+}
+</style>
+
+    <style>
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+        <th scope="col">Nr</th>
+      <th scope="col">Name</th>
+      <th scope="col">Nations</th>
+      <th scope="col">Team</th>
+      <th scope="col">City</th>
+        <th scope="col">Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for players in name %}
+    <tr>
+        <td>{{ players.id }}</td>
+<!--{#      <th scope="row">1</th>#}-->
+        <td>{{ players.name }}</td>
+      <td>{{ players.nations }}</td>
+      <td>{{ players.team }}</td>
+      <td>{{ players.city }}</td>
+    <td>
+
+        <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+
+    </td>
+    </tr>
+   {% endfor %}
+
+  </tbody>
+</table>
+
+<div style="text-align: center;">
+ <input class="button" type="button" onclick="window.location.href='../../..';" value="Edit Players" />
+</div>
+
+    <!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-soccer-ball-o w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>DataBase with best Active Players</h1>
+      <h5 class="w3-padding-32">Jean-Pierre Papin has described football as a "universal language".
+          Footballers across the world and at almost any level may regularly attract large crowds of
+          spectators, and players are the focal points of widespread social phenomena such as association football culture.</h5>
+
+      <p2 class="w3-text-grey">In association football there are four traditional types of specialties (positions):
+          goalkeepers (goalies), defenders (full-backs), midfielders (half-backs), forwards (attackers). Special purpose positions include such performers like sweepers, stoppers, second forwards (under-attackers), wingers, insiders, etc.
+
+Goalkeepers: good reflexes, communication with defence.
+Centre-backs: good heading and tackling ability, height.
+Full-backs: pace, stamina, anticipation, tackling and marking abilities.
+Central midfielders: stamina, passing ability, team responsibility.
+Wingers: pace, technical ability like dribbling and close control.
+Forwards: finishing ability, composure, technical ability, heading ability.</p2>
+    </div>
+  </div>
+ </div>
+{% endblock %}
