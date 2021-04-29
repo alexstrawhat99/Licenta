@@ -10,12 +10,14 @@ import com.gpch.mongo.model.Legend;
 import com.gpch.mongo.model.Team;
 
 import lombok.extern.slf4j.Slf4j;
+import org.bson.types.Binary;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-
+import com.gpch.mongo.model.Photo;
+import com.gpch.mongo.repository.PhotoRepository;
 //pus
 import com.gpch.mongo.model.Role;
 import com.gpch.mongo.repository.RoleRepository;
@@ -66,6 +68,27 @@ public class MongoApplication {
 		};
 
 	}
+
+//	@Bean
+//	public CommandLineRunner setupPhotos(PhotoService photoService) {
+//		return (args) -> {
+//			log.info("Generating sample data");
+////			playerService.deleteAllPlayers();
+//			List<String> photos = Arrays.asList();
+////			List<String> photos = Binary.asList();
+//
+//			photos.forEach(photo ->
+//					photoService.savePhoto(Photo.builder()
+//							.title(photo)
+//							.build()));
+//
+//			photoService.getAllPhotos().forEach(photo ->
+//					log.info("PHOTOS --> " + photo.getTitle() + photo.getImage()  +
+//						 " ID: " + photo.getId()));
+//			photoService.saveAll(photos); //pus de mn
+//		};
+//
+//	}
 
 	//Lista manageri
 

@@ -53,6 +53,14 @@ public class PageController {
         return modelAndView;
     }
 
+//    @RequestMapping("/poze")
+//    public ModelAndView poze() {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.setViewName("poze");
+//        return modelAndView;
+//    }
+
+
 
 
 
