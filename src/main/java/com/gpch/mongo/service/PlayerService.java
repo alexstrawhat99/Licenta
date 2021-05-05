@@ -36,6 +36,7 @@ public class PlayerService {
     }
 
     public void deletePlayerById(String id){
+
         playerRepository.deleteById(id);
     }
 
