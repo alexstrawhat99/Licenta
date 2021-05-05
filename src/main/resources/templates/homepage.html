@@ -5,7 +5,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+<html xmlns="https://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{default}" lang="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -73,17 +74,29 @@
 				<a class="nav-link" href="/managers-ui">Managers</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/legends-ui">Football Legends</a>
+				<a class="nav-link" href="/legends-ui">Legends</a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="/teams-ui">Teams</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/about">About Us</a>
+				<a class="nav-link" href="/photos/upload">New Player</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="/logout">Logout</a>
+				<a class="nav-link" href="/about">About</a>
 			</li>
+
+			<li>
+			<div layout:fragment="content">
+				<a class="nav-link text-success"  th:inline="text">Logged as [[${#httpServletRequest.remoteUser}]]!</a>
+			</div>
+			</li>
+
+
+			<li class="nav-item">
+				<a class="nav-link text-danger" href="/logout">Logout</a>
+			</li>
+
 <!--			<li class="nav-item">-->
 <!--				<a class="nav-link" href="/signup">Register</a>-->
 <!--			</li>-->

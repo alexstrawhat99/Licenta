@@ -1,10 +1,11 @@
 package com.gpch.mongo.model;
 
-
+import org.bson.types.Binary;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.bson.types.Binary;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -27,8 +28,13 @@ public class Player {
     private String transfer;
     private String rating;
     private String nation;
+    private String title;
+    private Binary image;
     @DateTimeFormat(pattern="dd-MM-yyyy HH:mm")
     @NotNull(message="Please provide a date whit the format dd-MM-yyyy HH:mm")
     private LocalDateTime date;
+
+    public Player(String title) {
+    }
 }
 //Model Class
